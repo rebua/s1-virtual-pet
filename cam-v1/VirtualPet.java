@@ -36,4 +36,23 @@ public class VirtualPet {
         face.setImage("asleep");
     }
 
+    public void joyforUser(){
+        hunger = hunger + 1;
+        face.setImage("ecstatic");
+        face.setMessage("Woohoo! Me too!");
+    }
+
+    public void sadforUser(){
+        face.setImage("verysad");
+        face.setMessage("I'm sorry to hear that...");
+    }
+
+    public void hopefulforUser(){
+        face.setImage("love");
+        face.setMessage("I hope I can make your day better...");
+    }
+
+    public void astonishedforUser(){
+        face.setImage("astonished");
+    }
 } // end Virtual Pet
