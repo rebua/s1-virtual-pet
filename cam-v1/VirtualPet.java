@@ -42,14 +42,19 @@ public class VirtualPet {
         face.setMessage("Woohoo! Me too!");
     }
 
+    public void joyforFood(){
+        face.setImage("ecstatic");
+        face.setMessage("Yay! Let's go!");
+    }
+
     public void sadforUser(){
         face.setImage("verysad");
         face.setMessage("I'm sorry to hear that...");
     }
 
     public void hopefulforUser(){
-        face.setImage("love");
-        face.setMessage("I hope I can make your day better...");
+        face.setImage("joyful");
+        face.setMessage("I hope I can make your day better!");
     }
 
     public void astonishedforUser(){
