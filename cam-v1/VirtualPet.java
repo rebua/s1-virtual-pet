@@ -37,8 +37,18 @@ public class VirtualPet {
     }
 
     public void happyforPark(){
-        face.setImage("happy");
+        face.setImage("ecstatic");
         face.setMessage("To the park we go!");
+    }
+
+    public void happyforSalmon(){
+        face.setImage("happy");
+        face.setMessage("Phew! That was good!");
+    }
+
+    public void happyforChickenBurger(){
+        face.setImage("happy");
+        face.setMessage("It's not bad! I might get this more often!");
     }
 
     public void sadforHome(){
@@ -62,6 +72,16 @@ public class VirtualPet {
         face.setMessage("Okay! Let's get ourselves some burgers!");
     }
 
+    public void surprisedforVegetarian(){
+        face.setImage("surprised");
+        face.setMessage("Vegetarian? I've never had it before, I hope it's good.");
+    }
+
+    public void joyforCheeseburger(){
+        face.setImage("ecstatic");
+        face.setMessage("My favorite! I love it!");
+    }
+
      public void joyforSushi(){
         face.setImage("ecstatic");
         face.setMessage("Okay! Let's get ourselves some sushi!");
@@ -77,6 +97,21 @@ public class VirtualPet {
         face.setMessage("Oh, well, that's okay. I was really looking forward to eating with you.");
     }
 
+    public void sickforTuna(){
+        face.setImage("sick");
+        face.setMessage("Oof, I don't feel so good...");
+    }
+
+    public void diefromTuna(){
+        face.setImage("die");
+        face.setMessage("Urgh... ugh... ");
+    }
+
+    public void deathfromTuna(){
+        face.setImage("angel");
+        face.setMessage("I forgot that I was deathly allergic to tuna...");
+    }
+
     public void hopefulforUser(){
         face.setImage("joyful");
         face.setMessage("I hope I can make your day better!");
@@ -89,5 +124,14 @@ public class VirtualPet {
 
     public void astonishedforUser(){
         face.setImage("astonished");
+    }
+
+    public void annoyedatUser(){
+        face.setImage("annoyed");
+    }
+
+    public void endDeath(){
+        face.setImage("pushingdaisies");
+        face.setMessage("Virtual Pet died. The end.");
     }
 } // end Virtual Pet
