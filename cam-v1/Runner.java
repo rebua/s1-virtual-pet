@@ -1,3 +1,5 @@
+
+
 import javax.swing.*;
 
 public class Runner {
@@ -30,6 +32,9 @@ public class Runner {
         int ans2 = -1;
         int ans3 = -1;
         int ansSushi = -1;
+        int ansAnnoyed = -1;
+        int ansBurger = -1;
+        int ansVeggie = -1;
         if(ans1 == 0){
             v1.joyforFood();
         }
@@ -41,6 +46,7 @@ public class Runner {
             v1.hopefulforFood();
         }
 
+        //Asking if get burger or sushi or don't feel like eating
         if(ans1 == 0){
             ans2 = getAnswerFood("What kind of food should we get?");
             if (ans2 == 0){
@@ -57,7 +63,47 @@ public class Runner {
             }
         }
 
-        if (ans2 == 2 || ans1 == 1){
+
+        //Left off here
+        if (ans2 == 0){
+            ansBurger = getAnswerBurger("What kind of burger should we get?");
+            if (ansBurger == 0){
+                v1.joyforCheeseburger();
+                sleep(2000);
+            }
+            else if (ansBurger == 1){
+                v1.happyforChickenBurger();
+                sleep(2000);
+            }
+            else if (ansBurger == 2){
+                v1.surprisedforVegetarian();
+                sleep(1000);
+                ansVeggie = getAnswerYON("The burger looks a little off... It's all gray and offputting... You could have sworn you just saw a worm in the patty. Eat it?");
+                if (ansVeggie == 0){
+
+                }
+            }
+        }
+
+            //Asking if eat tuna or salmon
+        if (ans2 == 1){
+            ansSushi = getAnswerSushi("What kind of sushi should we get? I think I got sick because I ate one of them before...");
+                if (ansSushi == 0){
+                    v1.sickforTuna();
+                    sleep(3000);
+                    v1.diefromTuna();
+                    sleep(5000);
+                    v1.deathfromTuna();
+                    sleep(5000);
+                    v1.endDeath();
+                }
+                else if (ansSushi == 1){
+                    v1.happyforSalmon();
+                    sleep(2000);   
+                }
+            }
+
+            if (ans2 == 2 || ans1 == 1 || ansSushi == 1){
             ans3 = getAnswerBored("Well, what should we do now?");
                 if (ans3 == 0){
                     v1.happyforPark();
@@ -69,15 +115,14 @@ public class Runner {
                 }
             }
 
-        if (ans2 == 0){
-            ansSushi = getAnswerSushi("What kind of sushi should we get? I think I got sick because I ate one of them before...");
-                if (ansSushi == 0){
-                    
-                }
-                else if (ansSushi == 1){
-
-        }
-
+            // if (ans1 == 1 && ans3 == 1){
+            //     v1.annoyedatUser();
+            //     sleep(2000);
+            //     ansAnnoyed = getAnswerAnnoyed("Should we not do anything then?");
+            //     if (ansAnnoyed )
+            // }
+        
+    }
 
     public String getAnswerPM(String q){
         String s = (String)JOptionPane.showInputDialog(
@@ -94,7 +139,7 @@ return s;
         int s = (int)JOptionPane.showOptionDialog(
                     new JFrame(),
                     q,
-                    "Mood",
+                    "Yes or No?",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,     //do not use a custom Icon
@@ -122,7 +167,7 @@ return s;
         int s = (int)JOptionPane.showOptionDialog(
                     new JFrame(),
                     q,
-                    "Mood",
+                    "Food",
                     JOptionPane.YES_NO_CANCEL_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,     //do not use a custom Icon
@@ -131,13 +176,41 @@ return s;
         return s;
     }
 
+    // public int getAnswerAnnoyed(String q){
+    //     Object[] options = {"Yes", "No", "I just don't want to do things with someone like you."};
+    //     int s = (int)JOptionPane.showOptionDialog(
+    //                 new JFrame(),
+    //                 q,
+    //                 "Annoyed",
+    //                 JOptionPane.YES_NO_CANCEL_OPTION,
+    //                 JOptionPane.QUESTION_MESSAGE,
+    //                 null,     //do not use a custom Icon
+    //                 options,  //the titles of buttons
+    //                 options[0]); //default button title
+    //     return s;
+    // }
+
     public int getAnswerSushi(String q){
         Object[] options = {"Tuna", "Salmon"};
         int s = (int)JOptionPane.showOptionDialog(
                     new JFrame(),
                     q,
-                    "Mood",
+                    "Sushi",
                     JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,     //do not use a custom Icon
+                    options,  //the titles of buttons
+                    options[0]); //default button title
+        return s;
+    }
+
+    public int getAnswerBurger(String q){
+        Object[] options = {"Cheeseburger", "Chicken Burger", "Vegetarian Burger"};
+        int s = (int)JOptionPane.showOptionDialog(
+                    new JFrame(),
+                    q,
+                    "Sushi",
+                    JOptionPane.YES_NO_CANCEL_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null,     //do not use a custom Icon
                     options,  //the titles of buttons
