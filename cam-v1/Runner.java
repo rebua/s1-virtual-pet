@@ -10,18 +10,18 @@ public class Runner {
         // v1.feed();
         // sleep(1000);
         // v1.sleep();
-        // int ans = getAnswerGOB("Friend! How ya hangin'?");
-        // if(ans == 0){
-        //     v1.joyforUser();
-        //     sleep(2000);
-        // }
-        // else if(ans == 1){
-        //     v1.astonishedforUser();
-        //     sleep(1000);
-        //     v1.sadforUser();
-        //     sleep(1000);
-        //     v1.hopefulforUser();
-        // }
+        int ans = getAnswerGOB("Friend! How ya hangin'?");
+        if(ans == 0){
+            v1.joyforUser();
+            sleep(2000);
+        }
+        else if(ans == 1){
+            v1.astonishedforUser();
+            sleep(1000);
+            v1.sadforUser();
+            sleep(1000);
+            v1.hopefulforUser();
+        }
 
 
         // LEFT OFF HERE! IDEA IS TO MAKE DUDE SAD IF REFUSE, ASK AGAIN, THEN GET MAD
