@@ -10,18 +10,18 @@ public class Runner {
         // v1.feed();
         // sleep(1000);
         // v1.sleep();
-        // int ans = getAnswerGOB("Friend! How ya hangin'?");
-        // if(ans == 0){
-        //     v1.joyforUser();
-        //     sleep(2000);
-        // }
-        // else if(ans == 1){
-        //     v1.astonishedforUser();
-        //     sleep(1000);
-        //     v1.sadforUser();
-        //     sleep(1000);
-        //     v1.hopefulforUser();
-        // }
+        int ans = getAnswerGOB("Friend! How ya hangin'?");
+        if(ans == 0){
+            v1.joyforUser();
+            sleep(2000);
+        }
+        else if(ans == 1){
+            v1.astonishedforUser();
+            sleep(1000);
+            v1.sadforUser();
+            sleep(1000);
+            v1.hopefulforUser();
+        }
 
 
         // LEFT OFF HERE! IDEA IS TO MAKE DUDE SAD IF REFUSE, ASK AGAIN, THEN GET MAD
@@ -80,7 +80,13 @@ public class Runner {
                 sleep(1000);
                 ansVeggie = getAnswerYON("The burger looks a little off... It's all gray and offputting... You could have sworn you just saw a worm in the patty. Eat it?");
                 if (ansVeggie == 0){
-
+                     v1.sickforFood();
+                    sleep(3000);
+                    v1.diefromFood();
+                    sleep(5000);
+                    v1.deathfromVeggie();
+                    sleep(5000);
+                    v1.endDeath();
                 }
             }
         }
@@ -89,9 +95,9 @@ public class Runner {
         if (ans2 == 1){
             ansSushi = getAnswerSushi("What kind of sushi should we get? I think I got sick because I ate one of them before...");
                 if (ansSushi == 0){
-                    v1.sickforTuna();
+                    v1.sickforFood();
                     sleep(3000);
-                    v1.diefromTuna();
+                    v1.diefromFood();
                     sleep(5000);
                     v1.deathfromTuna();
                     sleep(5000);
