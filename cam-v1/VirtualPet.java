@@ -97,12 +97,12 @@ public class VirtualPet {
         face.setMessage("Oh, well, that's okay. I was really looking forward to eating with you.");
     }
 
-    public void sickforTuna(){
+    public void sickforFood(){
         face.setImage("sick");
         face.setMessage("Oof, I don't feel so good...");
     }
 
-    public void diefromTuna(){
+    public void diefromFood(){
         face.setImage("die");
         face.setMessage("Urgh... ugh... ");
     }
@@ -110,6 +110,11 @@ public class VirtualPet {
     public void deathfromTuna(){
         face.setImage("angel");
         face.setMessage("I forgot that I was deathly allergic to tuna...");
+    }
+
+    public void deathfromVeggie(){
+        face.setImage("angel");
+        face.setMessage("I shouldn't have eaten that burger...");
     }
 
     public void hopefulforUser(){
